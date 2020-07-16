@@ -1,0 +1,7 @@
+.upload-box {
+  display: flex;
+  padding: 20px;
+  width: 320px;
+  background-color: white;
+  border-radius: 8px;
+}

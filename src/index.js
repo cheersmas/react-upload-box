@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {Line} from './components/Line';
+import {UploadBox} from './components/UploadBox';
 
 ReactDOM.render(
   <React.StrictMode>
