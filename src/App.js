@@ -1,45 +1,47 @@
-import React, {useState, useEffect, useCallback, useRef} from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
+import {
+  startUpload,
+  pauseUpload,
+  stopUpload,
+  resetUpload
+} from './actions';
+import {UploadBox} from "./components/UploadBox";
 import './App.css';
+import {Line} from "./components/Line";
 
-function App() {
-  const [percentage, setPercentage] = useState(0);
-  let timer = useRef();
-  const update = useCallback(
-    () => {
-      if (timer.current) clearInterval(timer.current);
-      setPercentage(prev => prev + 1);
-    },[]);
-
-  const pause = useCallback(
-    () => {
-      clearInterval(timer.current);
-    },[]);
-
-  const cancel = useCallback(
-    () => {
-      setPercentage(0);
-      clearInterval(timer.current);
-    },[]);
-
-  useEffect(() => {
-    timer.current = setInterval(() => {
-      if (percentage === 100) {
-        clearInterval(timer.current);
-        return
-      }
-      update();
-    }, 100);
-    return () => clearInterval(timer.current); 
-  }, [percentage, update]);
-
+function App({
+  // store
+  percentage,
+  // actions
+  startUpload,
+  stopUpload,
+  pauseUpload,
+  resetUpload,
+}) {
   return (
     <div className="App">
-      <button onClick={update}>Update</button>
-      <button onClick={pause}>Pause Upload</button>
-      <button onClick={cancel}>Cancel Upload</button>
-      <span>{percentage}</span>
+      <button onClick={startUpload}>Start Upload</button>
+      <button onClick={pauseUpload}>Pause Upload</button>
+      <button onClick={stopUpload}>Stop Upload</button>
+      <button onClick={resetUpload}>Reset Upload</button>
+      <UploadBox percentage={percentage} />
+      <Line />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = store => ({
+  percentage: store.percentageStore.percentage
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    startUpload: () => dispatch(startUpload()),
+    stopUpload: () => dispatch(stopUpload()),
+    pauseUpload: () => dispatch(pauseUpload()),
+    resetUpload: () => dispatch(resetUpload())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

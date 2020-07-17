@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import './UploadBox.css';
-import {Line} from './Line';
+import {StyledUploadBox} from './UploadBox.styled';
+import {Line} from './Line'
 
-export const UploadBox = (props) => <div className="upload-box">
-    <Line />
-  </div>
+export const UploadBox = (props) => <StyledUploadBox {...props}>
+</StyledUploadBox>
