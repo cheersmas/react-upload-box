@@ -7,8 +7,8 @@ import {
   resetUpload
 } from './actions';
 import {UploadBox} from "./components/UploadBox";
+import {Annotations} from "./components/Annotations";
 import './App.css';
-import {Line} from "./components/Line";
 import {Status} from "./constants";
 
 function App({
@@ -56,6 +56,7 @@ function App({
           resetUpload
         }}
       />
+      <Annotations />
     </div>
   );
 }
