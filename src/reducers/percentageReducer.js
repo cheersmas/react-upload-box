@@ -1,8 +1,8 @@
 import {Status, ActionConstants} from '../constants';
 
 export const initialState = {
-  percentage: 10,
-  status: Status.STOPPED
+  percentage: 0,
+  status: Status.RUNNING
 }
 
 export function percentageReducer(state  = initialState, action) {
@@ -17,6 +17,8 @@ export function percentageReducer(state  = initialState, action) {
       return {...state, status: Status.STOPPED, percentage: 0}
     case ActionConstants.UPDATE_PERCENTAGE:
       return {...state, percentage: state.percentage + 1}
+    case ActionConstants.COMPLETE_UPLOAD:
+      return {...state, status: Status.COMPLETED}
     default:
       return state;
   } 

@@ -1,7 +1,8 @@
 export const Status = Object.freeze({
   RUNNING: 'RUNNING',
   STOPPED: 'STOPPED',
-  PAUSED: 'PAUSED'
+  PAUSED: 'PAUSED',
+  COMPLETED: 'COMPLETED'
 });
 
 export const ActionConstants = Object.freeze({
@@ -9,5 +10,6 @@ export const ActionConstants = Object.freeze({
   PAUSE_UPLOAD: 'PAUSE_UPLOAD',
   STOP_UPLOAD: 'STOP_UPLOAD',
   RESET_UPLOAD: 'RESET_UPLOAD',
-  UPDATE_PERCENTAGE: 'UPDATE_PERCENTAGE'
+  UPDATE_PERCENTAGE: 'UPDATE_PERCENTAGE',
+  COMPLETE_UPLOAD: 'COMPLETE_UPLOAD'
 });

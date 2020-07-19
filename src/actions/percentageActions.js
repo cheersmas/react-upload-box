@@ -19,3 +19,7 @@ export const stopUpload = () => ({
 export const resetUpload = () => ({
   type: ActionConstants.RESET_UPLOAD
 })
+
+export const uploadComplete = () => ({
+  type: ActionConstants.COMPLETE_UPLOAD
+})

@@ -1,10 +1,11 @@
 import {call, takeLatest, take, race, put, select, cancelled} from "redux-saga/effects";
 import {eventChannel} from 'redux-saga';
-import {ActionConstants} from "../constants";
+import {ActionConstants, Status} from "../constants";
 import {
   updatePercentage,
   stopUpload,
   pauseUpload,
+  uploadComplete
 } from '../actions';
 
 const getPercentage = (store) => store.percentageStore.percentage;
@@ -36,6 +37,7 @@ function* percentageUpdater() {
       } else {
         const percentage = yield select(getPercentage);
         if (percentage >= 100) {
+          yield put(uploadComplete())
           chan.close()
           break
         }
