@@ -5,8 +5,9 @@ import {
   Play,
   Pause,
   Stop,
-  More
+  More,
 } from "../assets";
+import CodePen from '../assets/codepen.png';
 
 export const Annotations = (props) => (
   <StyledAnnotation>
@@ -22,8 +23,11 @@ export const Annotations = (props) => (
     <a href="https://icon54.com/" title="Pixel perfect">
       <More />
     </a>
+    <a href={"https://codepen.io/aaroniker/pen/QXxexJ?editors=1010"}>
+      <img src={CodePen} alt={"Aaron Codepen"} height={30}/>
+    </a>
     <a href={"https://dribbble.com/shots/6052541-Upload-window-interactions"}>
-      <img src={Dribbble} alt={'dribbble icon'} />
+      <img src={Dribbble} alt={'dribbble icon'} height={30}/>
     </a>
   </StyledAnnotation>
 )

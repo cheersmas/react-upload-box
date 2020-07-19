@@ -19,7 +19,7 @@ export const StyledAnnotation = styled.div`
   }
   
   & img {
-    padding-top: 50px;
+    padding-top: 10px;
   }
   
 `;
