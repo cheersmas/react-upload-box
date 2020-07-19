@@ -7,7 +7,7 @@ import {
   StyledPauseButton,
   StyledPlayButton, StyledStopButton, StyledMoreButton,
 } from './UploadBox.styled';
-import {Line} from './Line'
+import {Line} from './Line';
 
 export const UploadBox = ({
   fileName,

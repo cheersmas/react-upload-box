@@ -27,7 +27,7 @@ export const StyledUploadPercentageBox = styled.div`
       background: #134074;
       overflow: hidden;
       transform: scaleX(${percentage / 100});
-      transition: all 100ms linear;
+      transition: all 200ms linear;
   `}
 `;
 
@@ -48,10 +48,10 @@ export const StyledControls = styled.div`
     .file-name {
       font-weight: 600;
       padding-bottom: 8px;
+      color: #EEF4ED;
       ${hoverTransition};
       &:hover {
         cursor: pointer;
-        color: #EEF4ED;
       }
     }
     .percentage {
@@ -104,7 +104,6 @@ const sharedBehaviour = `
 export const StyledPlayButton = styled(Play)`
   ${sharedBehaviour};
   ${({disabled}) => disabled && css`
-    opacity: 10%;
     cursor: pointer;
     pointer-events: none;
   `}
