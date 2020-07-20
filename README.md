@@ -6,16 +6,16 @@
 
 Icons:
 
-![Play]("https://www.flaticon.com/authors/pixel-perfect")
+[Play](https://www.flaticon.com/authors/pixel-perfect)
 
-![Pause]("https://icon54.com/")
+[Pause](https://icon54.com/)
 
-![More]("https://icon54.com/")
+[More](https://icon54.com/)
 
-![Stop]("https://www.flaticon.com/authors/freepik")
+[Stop](https://www.flaticon.com/authors/freepik)
 
 References:
 
-![Codepen - Aaron Iker]("https://codepen.io/aaroniker/pen/QXxexJ?editors=1010")
+[Codepen - Aaron Iker](https://codepen.io/aaroniker/pen/QXxexJ?editors=1010)
 
-![Dribbble - Jakub Antalik]("https://dribbble.com/shots/6052541-Upload-window-interactions")
+[Dribbble - Jakub Antalik](https://dribbble.com/shots/6052541-Upload-window-interactions)
