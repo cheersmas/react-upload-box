@@ -8,6 +8,6 @@ export const StyledLineSvg = styled.svg`
     width: 300%;
     transform: translateX(${paused ? '-66.67' : '0'}%);
     transition: transform 1s ease, stroke 300ms linear;
-    stroke: ${!paused ? '#c32361' : '#13315C'};
+    stroke: ${!paused ? '#ff5100' : 'rgba(238,244,237,0.32)'};
   `};
 `;

@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {More, Pause, Play, Stop} from "../assets";
+import {More, Pause, Play, Stop, Upload} from "../assets";
 
 const hoverTransition = 'transition: all .1s ease';
 
@@ -86,22 +86,18 @@ export const StyledControls = styled.div`
 `;
 
 const sharedBehaviour = `
-  opacity: 0;
   height: 16px;
   padding-right: 20px;
+  fill: #8DA9C4;
   ${hoverTransition};
-  ${StyledUploadBox}:hover & {
-    fill: #8DA9C4;
-    opacity: 0.5;
-    &:hover {
+  &:hover {
       opacity: 1;
       fill: #EEF4ED;
       cursor: pointer;
-    }
   }
 `;
 
-export const StyledPlayButton = styled(Play)`
+export const StyledPlayButton = styled(Upload)`
   ${sharedBehaviour};
   ${({disabled}) => disabled && css`
     cursor: pointer;
