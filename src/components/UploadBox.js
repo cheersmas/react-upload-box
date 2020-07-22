@@ -1,11 +1,13 @@
 import React from 'react';
-import {Play, Pause} from "../assets";
 import {
   StyledUploadBox,
   StyledUploadPercentageBox,
   StyledControls,
   StyledPauseButton,
-  StyledPlayButton, StyledStopButton, StyledMoreButton,
+  StyledPlayButton,
+  StyledStopButton,
+  StyledMoreButton,
+  StyledExpansionButtons, Some, StyledControllerWrapper, StyledCancelButton, StyledRestartButton,
 } from './UploadBox.styled';
 import {Line} from './Line';
 
@@ -18,11 +20,12 @@ export const UploadBox = ({
   startUpload,
   pauseUpload,
   stopUpload,
-  status
+  resetUpload,
+  status: {text, color}
 }) => {
   return (
     <StyledUploadBox {...{percentage}}>
-      <StyledControls {...{percentage, status}}>
+      <StyledControls {...{percentage, text, color}}>
         <div className={'status'}>
           <div className={'file-name'}>{fileName}</div>
           <div className={'percentage'}>
@@ -34,8 +37,13 @@ export const UploadBox = ({
           {paused || stopped || completed ?
           <StyledPlayButton onClick={startUpload} disabled={completed} /> :
           <StyledPauseButton onClick={pauseUpload} />}
-          <StyledStopButton onClick={stopUpload} />
-          <StyledMoreButton />
+          <StyledControllerWrapper>
+            <StyledMoreButton />
+            <StyledExpansionButtons>
+              <StyledRestartButton onClick={resetUpload} />
+              <StyledCancelButton onClick={stopUpload} />
+            </StyledExpansionButtons>
+          </StyledControllerWrapper>
         </div>
       </StyledControls>
       <StyledUploadPercentageBox {...{paused, percentage}}>

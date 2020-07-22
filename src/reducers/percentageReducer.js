@@ -14,7 +14,7 @@ export function percentageReducer(state  = initialState, action) {
     case ActionConstants.STOP_UPLOAD:
       return {...state, status: Status.STOPPED, percentage: 0}
     case ActionConstants.RESET_UPLOAD:
-      return {...state, status: Status.STOPPED, percentage: 0}
+      return {...state, status: Status.RUNNING, percentage: 0}
     case ActionConstants.UPDATE_PERCENTAGE:
       return {...state, percentage: state.percentage + 1}
     case ActionConstants.COMPLETE_UPLOAD:

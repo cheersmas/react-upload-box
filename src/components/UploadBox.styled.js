@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components";
-import {More, Pause, Play, Stop, Upload} from "../assets";
+import {Cancel, More, Pause, Play, Restart, Stop, Upload} from "../assets";
 
 const hoverTransition = 'transition: all .1s ease';
 
@@ -64,10 +64,11 @@ export const StyledControls = styled.div`
         position: absolute;
         left: 40px;
         bottom: 17px;
-        ${({status}) => css`
+        ${({text, color}) => css`
           &::after {
-            content: '${status}';
+            content: '${text}';
             position: absolute;
+            color: ${color};
             left: 10px;
             bottom: 0;
             width: 100px;
@@ -113,14 +114,59 @@ export const StyledStopButton = styled(Stop)`
   ${sharedBehaviour};
 `;
 
+export const StyledCancelButton = styled(Cancel)`
+  ${sharedBehaviour};
+  height: 18px;
+  fill: #8DA9C4;
+  &:hover {
+    fill: #c64949
+  }
+`;
+
+export const StyledRestartButton = styled(Restart)`
+  ${sharedBehaviour};
+`;
+
+export const StyledControllerWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+`;
+
 export const StyledMoreButton = styled(More)`
   fill: #8DA9C4;
   opacity: 0.5;
   height: 16px;
   ${hoverTransition};
-  &:hover {
+  z-index: 1;
+  ${StyledControllerWrapper}:hover & {
     opacity: 1;
     cursor: pointer;
   }
 `;
 
+export const StyledExpansionButtons = styled.div`
+  position: absolute;
+  right: -4px;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all 200ms ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > * {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  ${StyledControllerWrapper}:hover & {
+    padding: 20px;
+    background-color: #0B2545;
+    & > * {
+      width: 16px;
+      height: 16px;
+      opacity: 1;
+    }
+  }
+`;

@@ -25,15 +25,15 @@ function App({
   const getStatus = () => {
     switch(status) {
       case(Status.RUNNING):
-        return "Uploading..."
+        return {text: "Uploading...", color: '#ade3cf'}
       case(Status.STOPPED):
-        return "Stopped"
+        return {text: "Stopped", color: '#fda7a7'}
       case(Status.PAUSED):
-        return "Paused"
+        return {text: "Paused", color: '#518be8'}
       case(Status.COMPLETED):
-        return "Upload Complete"
+        return {text: "Upload Complete", color: '#6ee379'}
       default:
-        return "Uploading..."
+        return {text: "Uploading...", color: '#ade3cf'}
     }
   }
   const getPaused = () => status === Status.PAUSED

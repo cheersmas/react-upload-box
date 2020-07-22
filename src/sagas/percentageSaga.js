@@ -1,11 +1,11 @@
-import {call, takeLatest, take, race, put, select, cancelled} from "redux-saga/effects";
+import {call, takeLatest, delay, take, race, put, select, cancelled} from "redux-saga/effects";
 import {eventChannel} from 'redux-saga';
 import {ActionConstants, Status} from "../constants";
 import {
   updatePercentage,
   stopUpload,
   pauseUpload,
-  uploadComplete
+  uploadComplete, startUpload
 } from '../actions';
 
 const getPercentage = (store) => store.percentageStore.percentage;
@@ -51,6 +51,12 @@ function* percentageUpdater() {
     }
   }
 }
+export function* resetUpload() {
+  yield put(stopUpload());
+  yield delay(500);
+  yield put(startUpload())
+}
 export function* mySaga() {
   yield takeLatest(ActionConstants.START_UPLOAD, percentageUpdater);
+  yield takeLatest(ActionConstants.RESET_UPLOAD, resetUpload);
 }
