@@ -1,10 +1,11 @@
 ## File Upload
 
-### npm i && npm start
+##### npm i && npm start
 
 ![Upload file](https://github.com/cheersmas/upload-animation/blob/reducer/fileupload.gif)
 
-Icons:
+##### Icons:
+
 [Play]("https://www.flaticon.com/authors/pixel-perfect")
 
 [Pause]("https://icon54.com/")
@@ -17,7 +18,8 @@ Icons:
 
 [Cancel/Delete]("https://www.flaticon.com/authors/those-icons")
 
-References:
+##### References:
+
 [Codepen - Aaron Iker]("https://codepen.io/aaroniker/pen/QXxexJ?editors=1010")
 
 [Dribbble - Jakub Antalik]("https://dribbble.com/shots/6052541-Upload-window-interactions")
