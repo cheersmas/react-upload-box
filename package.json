@@ -1,11 +1,16 @@
 {
-  "name": "react-component",
+  "name": "react-download-component",
   "version": "1.0.0",
   "description": "A template for building react components powered by snowpack",
-  "main": "dist/react-component.js",
-  "module": "dist/react-component.esm.js",
-  "umd": "dist/react-component.umd.js",
+  "main": "dist/react-download-component.js",
+  "module": "dist/react-download-component.esm.js",
+  "umd": "dist/react-download-component.umd.js",
   "keywords": [
+    "react",
+    "download",
+    "upload",
+    "progress",
+    "progress-bar",
     "component"
   ],
   "files": [
