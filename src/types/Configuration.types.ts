@@ -1,3 +1,3 @@
 export type ComponentTypes = {
-  text: 'string'
-}
+  text: 'string';
+};
