@@ -1,8 +1,17 @@
-import type { ReactElement } from 'react';
-import React from 'react';
+import type { FC } from 'react';
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 
-function ReactNotification(): ReactElement {
-  return <div>Component Goes here</div>;
-}
+import { darkTheme, lightTheme } from '../styles/themes';
+import DownloadBox from './DownloadBox';
 
-export default ReactNotification;
+const Root: FC = ({ theme, ...rest }) => {
+  const [currentTheme, setCurrentTheme] = useState(theme || darkTheme);
+  return (
+    <ThemeProvider theme={currentTheme}>
+      <DownloadBox {...rest} />
+    </ThemeProvider>
+  );
+};
+
+export default Root;

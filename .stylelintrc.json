@@ -7,6 +7,8 @@
   ],
   "rules": {
     "value-keyword-case": null,
-    "function-name-case": null
+    "function-name-case": null,
+    "max-nesting-depth": 5,
+    "selector-max-compound-selectors": 5
   }
 }
