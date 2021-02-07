@@ -103,6 +103,7 @@ disabled?: '(applicable to only icon) color when upload is disabled'
 | overlayColor | controls color of overlay's background            |
 | line         | controls color of curvy line's stroke             |
 | text         | controls color of `percentage` & `fileName` texts |
+| icons        | controls color of icons                           |
 
 #### Refer this configuration for more details:
 
