@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';
 import type { DefaultTheme } from 'styled-components';
 
-import { ReactUpload } from '../react-component';
+import { ReactUpload } from '../react-upload-box';
 
 interface AppProps {
   seed?: number;
