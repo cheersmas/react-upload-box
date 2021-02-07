@@ -72,19 +72,19 @@
 
 ## Props
 
-| name         | type                                   | description                                                           | required                          | default                                           |
-| ------------ | -------------------------------------- | --------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------- | ----- |
-| fileName     | `string`                               | file name of the uploading file                                       | true                              | `undefined`                                       |
-| paused       | `boolean`                              | current pause state of the uploading file                             | true                              | `undefined` (falsy)                               |
-| percentage   | `number`                               | percentage of file uploaded                                           | true                              | `undefined`                                       |
-| completed    | `boolean`                              | prop to signal if upload completed (used to apply themes on complete) | false                             | false                                             |
-| disabled     | `boolean`                              | prop to disable play/pause button (usually after upload finishes)     | false                             | false                                             |
-| mode         | `light` or `dark`                      | light or dark theme mode (is overriden if `theme` is also supplied)   | false                             | 'light' (allowed values: 'light' or 'dark')       |
-| onPause      | `() => void`                           | callback fired `onClick` of Pause Button press                        | false                             | false                                             |
-| onStart      | `() => void`                           | callback fired `onClick` of Play Button press                         | false                             | false                                             |
-| strokeHeight | `number`                               | `string`                                                              | height of the line from base line | false                                             | `25%` |
-| strokeWidth  | `number`                               | width of the line                                                     | false                             | 2                                                 |
-| theme        | [`DefaultTheme`](#default-theme-types) | custom theme for the component                                        | false                             | check [Default Theme Types](#default-theme-types) |
+| name         | type                                   | description                                                           | required | default                                           |
+| ------------ | -------------------------------------- | --------------------------------------------------------------------- | -------- | ------------------------------------------------- |
+| fileName     | `string`                               | file name of the uploading file                                       | true     | `undefined`                                       |
+| paused       | `boolean`                              | current pause state of the uploading file                             | true     | `undefined` (falsy)                               |
+| percentage   | `number`                               | percentage of file uploaded                                           | true     | `undefined`                                       |
+| completed    | `boolean`                              | prop to signal if upload completed (used to apply themes on complete) | false    | false                                             |
+| disabled     | `boolean`                              | prop to disable play/pause button (usually after upload finishes)     | false    | false                                             |
+| mode         | `light` or `dark`                      | light or dark theme mode (is overriden if `theme` is also supplied)   | false    | 'light' (allowed values: 'light' or 'dark')       |
+| onPause      | `() => void`                           | callback fired `onClick` of Pause Button press                        | false    | false                                             |
+| onStart      | `() => void`                           | callback fired `onClick` of Play Button press                         | false    | false                                             |
+| strokeHeight | `number` or `string`                   | height of the line from base line                                     | false    | `25%`                                             |
+| strokeWidth  | `number`                               | width of the line                                                     | false    | 2                                                 |
+| theme        | [`DefaultTheme`](#default-theme-types) | custom theme for the component                                        | false    | check [Default Theme Types](#default-theme-types) |
 
 ### Default Theme Types
 
