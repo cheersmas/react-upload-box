@@ -2,8 +2,7 @@ import styled, { css } from 'styled-components';
 
 const StyledDownloadBox = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.components.primary};
-    border-bottom: 0.5px solid #4d4d4d;
+    background-color: ${theme.box.backgroundColor};
     display: flex;
     flex-direction: column;
     overflow: hidden;

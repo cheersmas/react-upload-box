@@ -1,75 +1,55 @@
 /* eslint-disable max-lines */
-import React, { Suspense } from 'react';
+import React from 'react';
 
 import {
-  CancelButton,
-  MoreButton,
   PauseButton,
   PlayButton,
-  RestartButton,
-  StyledControllerWrapper,
   StyledControls,
   StyledDownloadBox,
   StyledDownloadPercentageBox,
-  StyledExpansionButtons,
   StyledLine
 } from '../styles/components';
 
 export interface DownloadBoxProps {
-  fileName: string;
-  percentage: number;
-  paused: boolean;
-  stopped?: boolean;
   completed?: boolean;
-  startDownload?: () => void;
-  pauseDownload?: () => void;
-  stopDownload?: () => void;
-  resetDownload?: () => void;
-  status: {
-    text: string;
-    color: string;
-  };
+  disabled?: boolean;
+  fileName: string;
+  onPause?: () => void;
+  onStart?: () => void;
+  paused: boolean;
+  percentage: number;
+  strokeHeight?: number | string;
+  strokeWidth?: number;
 }
 const DownloadBox = ({
+  completed,
+  disabled,
   fileName,
+  onPause,
+  onStart,
   percentage,
   paused,
-  stopped,
-  completed,
-  startDownload,
-  pauseDownload,
-  stopDownload,
-  resetDownload,
-  status: { text, color }
+  strokeHeight = '25%',
+  strokeWidth = 2
 }: DownloadBoxProps): JSX.Element => (
   <StyledDownloadBox {...{ percentage }}>
-    <StyledControls {...{ percentage, text, color }}>
+    <StyledControls {...{ percentage }}>
       <div className="status">
         <div className="file-name">{fileName}</div>
         <div className="percentage">
           <span>{`${percentage}%`}</span>
-          <strong>
-            <span className="separator">·</span>
-          </strong>
         </div>
       </div>
       <div className="controls">
-        {paused || stopped || completed ? (
-          <PlayButton onClick={startDownload} disabled={completed} />
+        {paused || completed ? (
+          <PlayButton onClick={onStart} {...{ completed, paused, disabled }} />
         ) : (
-          <PauseButton onClick={pauseDownload} />
+          <PauseButton onClick={onPause} {...{ completed, paused }} />
         )}
-        <StyledControllerWrapper>
-          <MoreButton />
-          <StyledExpansionButtons>
-            <RestartButton onClick={resetDownload} />
-            <CancelButton onClick={stopDownload} />
-          </StyledExpansionButtons>
-        </StyledControllerWrapper>
       </div>
     </StyledControls>
-    <StyledDownloadPercentageBox {...{ paused, percentage }}>
-      <StyledLine {...{ paused }} />
+    <StyledDownloadPercentageBox {...{ completed, paused, percentage }}>
+      <StyledLine {...{ completed, paused, strokeHeight, strokeWidth }} />
     </StyledDownloadPercentageBox>
   </StyledDownloadBox>
 );

@@ -6,8 +6,8 @@ import React, { useEffect, useState } from 'react';
 import { ReactDownload } from '../react-component';
 
 const App: FC = () => {
-  const [pause, setPause] = useState(false);
   const [counter, setCounter] = useState(0);
+  const [pause, setPause] = useState(false);
   useEffect(() => {
     let timer;
     clearTimeout(timer);
@@ -28,9 +28,8 @@ const App: FC = () => {
         percentage={counter}
         paused={pause}
         completed={counter === 100}
-        status={{ text: 'complete', color: 'red' }}
-        pauseDownload={playPauseDownload}
-        startDownload={playPauseDownload}
+        onPause={playPauseDownload}
+        onStart={playPauseDownload}
       />
     </div>
   );

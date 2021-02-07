@@ -2,7 +2,12 @@ import type { ReactElement } from 'react';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import type { CommonProps, StyledButtonProps } from './Common';
+import type {
+  ButtonProps,
+  StyledLineSvgProps
+} from '../../../types/Styles.types';
+import getColor from '../../../utils/themeHelpers';
+import type { CommonProps } from './Common';
 import { sharedBehaviour } from './Common';
 
 function Play(props: CommonProps): ReactElement {
@@ -17,12 +22,13 @@ function Play(props: CommonProps): ReactElement {
   );
 }
 
-export default styled(Play)<StyledButtonProps>`
-  ${sharedBehaviour};
-  ${({ disabled }) =>
-    disabled &&
+export default styled(Play)<StyledLineSvgProps & ButtonProps>`
+  ${({ theme, paused, completed, disabled }) => css`
+    ${sharedBehaviour(getColor(theme.icons, { paused, completed, disabled }))};
+    ${disabled &&
     css`
       cursor: pointer;
       pointer-events: none;
     `}
+  `}
 `;

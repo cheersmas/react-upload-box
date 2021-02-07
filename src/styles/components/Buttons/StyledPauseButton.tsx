@@ -1,7 +1,9 @@
 import type { ReactElement } from 'react';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
+import type { StyledLineSvgProps } from '../../../types/Styles.types';
+import getColor from '../../../utils/themeHelpers';
 import type { CommonProps } from './Common';
 import { sharedBehaviour } from './Common';
 
@@ -14,6 +16,8 @@ function Pause(props: CommonProps): ReactElement {
   );
 }
 
-export default styled(Pause)`
-  ${sharedBehaviour};
+export default styled(Pause)<StyledLineSvgProps>`
+  ${({ theme, paused, completed }) => css`
+    ${sharedBehaviour(getColor(theme.icons, { paused, completed }))};
+  `}
 `;

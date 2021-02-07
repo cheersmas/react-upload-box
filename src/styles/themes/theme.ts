@@ -1,36 +1,35 @@
 import type { DefaultTheme } from 'styled-components';
 
-// https://colorhunt.co/palette/105443
 export const lightTheme: DefaultTheme = {
-  primary: '#f6f6f6',
-  secondary: '#ebebeb',
-  accent: '#3A3B4A',
-  components: {
-    primary: '#f6f6f6',
-    secondary: '#ffbb91',
-    accent: '#515070',
-    error: '#e43f5a',
-    interactive: '#1f3c88',
-    warning: '#1b1b2f',
-    disabled: '#cdc9c3',
-    borderColor: '#3f434a',
-    input: {
-      labelBackgroundColor: '#e5e5e5',
-      backgroundColor: '#fff',
-      textColor: '#000'
-    }
+  box: {
+    backgroundColor: '#f6f6f6',
+    overlay: '#01c5c4'
+  },
+  overlayColor: {
+    paused: 'blue',
+    running: 'red',
+    completed: 'orange'
+  },
+  line: {
+    paused: 'red',
+    running: 'blue',
+    completed: 'green'
   },
   text: {
-    primary: '#373a40',
-    secondary: '#686d76',
-    error: '#e43f5a',
-    interactive: '#fff',
-    warning: '#1b1b2f',
-    disabled: '#eeeeee'
+    fileName: '#fff',
+    percentage: '#1e222d'
+  },
+  ellipsisMenu: {
+    backgroundColor: '#cdc9c3'
+  },
+  icons: {
+    completed: 'green',
+    disabled: 'gray',
+    paused: 'black',
+    running: 'yellow'
   }
 };
 
-// https://colorhunt.co/palette/181367
 export const darkTheme: DefaultTheme = {
   primary: '#3D4042',
   secondary: '#363A3C',
