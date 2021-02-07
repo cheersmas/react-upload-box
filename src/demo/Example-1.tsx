@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';
 
 import type { RootProps } from '../components';
-import { ReactDownload } from '../react-component';
+import { ReactUpload } from '../react-component';
 
 type AppProps = {
   mode?: 'light' | 'dark';
@@ -31,7 +31,7 @@ const App: FC<AppProps & RootProps> = ({ mode, theme, seed, ...rest }) => {
     setPause(!pause);
   };
   return (
-    <ReactDownload
+    <ReactUpload
       mode={mode}
       theme={theme}
       fileName="ubuntu-2020-1-2.dmg"

@@ -4,21 +4,21 @@ import type { DefaultTheme } from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 
 import { darkTheme, lightTheme } from '../styles/themes';
-import type { DownloadBoxProps } from './DownloadBox';
-import DownloadBox from './DownloadBox';
+import type { UploadBoxProps } from './UploadBox';
+import UploadBox from './UploadBox';
 
 export interface RootProps {
   theme?: DefaultTheme;
   mode?: 'light' | 'dark';
 }
 
-const Root: FC<RootProps & DownloadBoxProps> = ({
+const Root: FC<RootProps & UploadBoxProps> = ({
   mode = 'light',
   theme,
   ...rest
 }) => (
   <ThemeProvider theme={theme || (mode === 'light' ? lightTheme : darkTheme)}>
-    <DownloadBox {...rest} />
+    <UploadBox {...rest} />
   </ThemeProvider>
 );
 

@@ -5,12 +5,12 @@ import {
   PauseButton,
   PlayButton,
   StyledControls,
-  StyledDownloadBox,
-  StyledDownloadPercentageBox,
-  StyledLine
+  StyledLine,
+  StyledUploadBox,
+  StyledUploadPercentageBox
 } from '../styles/components';
 
-export interface DownloadBoxProps {
+export interface UploadBoxProps {
   completed?: boolean;
   disabled?: boolean;
   fileName: string;
@@ -21,7 +21,7 @@ export interface DownloadBoxProps {
   strokeHeight?: number | string;
   strokeWidth?: number;
 }
-const DownloadBox = ({
+const UploadBox = ({
   completed,
   disabled,
   fileName,
@@ -32,8 +32,8 @@ const DownloadBox = ({
   strokeHeight = '25%',
   strokeWidth = 2,
   ...rest
-}: DownloadBoxProps): JSX.Element => (
-  <StyledDownloadBox {...{ percentage, completed, paused, ...rest }}>
+}: UploadBoxProps): JSX.Element => (
+  <StyledUploadBox {...{ percentage, completed, paused, ...rest }}>
     <StyledControls {...{ percentage }}>
       <div className="status">
         <div className="file-name">{fileName}</div>
@@ -49,10 +49,10 @@ const DownloadBox = ({
         )}
       </div>
     </StyledControls>
-    <StyledDownloadPercentageBox {...{ completed, paused, percentage }}>
+    <StyledUploadPercentageBox {...{ completed, paused, percentage }}>
       <StyledLine {...{ completed, paused, strokeHeight, strokeWidth }} />
-    </StyledDownloadPercentageBox>
-  </StyledDownloadBox>
+    </StyledUploadPercentageBox>
+  </StyledUploadBox>
 );
 
-export default DownloadBox;
+export default UploadBox;

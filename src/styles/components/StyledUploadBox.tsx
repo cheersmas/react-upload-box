@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import type { StyledLineSvgProps } from '../../types/Styles.types';
 import getColor from '../../utils/themeHelpers';
 
-const StyledDownloadBox = styled.div<StyledLineSvgProps>`
+const StyledUploadBox = styled.div<StyledLineSvgProps>`
   ${({ theme, paused, completed }) => css`
     background-color: ${getColor(theme.box, { paused, completed })};
     box-sizing: border-box;
@@ -17,4 +17,4 @@ const StyledDownloadBox = styled.div<StyledLineSvgProps>`
   `}
 `;
 
-export default StyledDownloadBox;
+export default StyledUploadBox;

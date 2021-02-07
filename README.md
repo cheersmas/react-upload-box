@@ -1,1 +1,1 @@
-# React Download Component
+# React Upload Component

@@ -1,17 +1,17 @@
 {
-  "name": "react-download-component",
+  "name": "react-upload-component",
   "version": "1.0.0",
-  "description": "A template for building react components powered by snowpack",
-  "main": "dist/react-download-component.js",
-  "module": "dist/react-download-component.esm.js",
-  "umd": "dist/react-download-component.umd.js",
+  "description": "A minimal react upload component with play/pause feature.",
+  "main": "dist/react-upload-component.js",
+  "module": "dist/react-upload-component.esm.js",
+  "umd": "dist/react-upload-component.umd.js",
   "keywords": [
-    "react",
+    "component",
     "download",
-    "upload",
     "progress",
     "progress-bar",
-    "component"
+    "react",
+    "upload"
   ],
   "files": [
     "dist"

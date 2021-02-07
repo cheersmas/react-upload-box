@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 
 import getColor from '../../utils/themeHelpers';
 
-export interface StyledDownloadBoxProps {
+export interface StyledUploadBoxProps {
   completed?: boolean;
   paused: boolean;
   percentage: number;
 }
 
-const StyledDownloadPercentageBox = styled.div<StyledDownloadBoxProps>`
+const StyledUploadPercentageBox = styled.div<StyledUploadBoxProps>`
   ${({ completed, paused, percentage, theme }) => css`
     background: ${getColor(theme.overlayColor, { paused, completed })};
     bottom: 0;
@@ -23,4 +23,4 @@ const StyledDownloadPercentageBox = styled.div<StyledDownloadBoxProps>`
   `}
 `;
 
-export default StyledDownloadPercentageBox;
+export default StyledUploadPercentageBox;
