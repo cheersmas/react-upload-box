@@ -2,7 +2,7 @@
 
 <div align="center">
   <div>
-    <img src="./readme-assets/react-upload-box.gif" />
+    <img src="./readme-assets/upload.gif" />
   </div>
 </div>
 
