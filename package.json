@@ -1,5 +1,5 @@
 {
-  "name": "react-upload-component",
+  "name": "react-upload-box",
   "version": "1.0.0",
   "description": "A minimal react upload component with play/pause feature.",
   "main": "dist/react-upload-component.js",

@@ -4,8 +4,7 @@ export const lightTheme: DefaultTheme = {
   box: {
     running: '#f1f8f2',
     paused: '#f5f5f5',
-    completed: '#b7dabe',
-    padding: 24
+    completed: '#b7dabe'
   },
   overlayColor: {
     paused: '#e6e6e6',
@@ -28,10 +27,10 @@ export const lightTheme: DefaultTheme = {
     running: '#00171f'
   }
 };
+
 export const darkTheme: DefaultTheme = {
   box: {
     completed: '#b7dabe',
-    padding: 24,
     paused: '#acaeb6',
     running: '#797b84'
   },

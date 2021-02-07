@@ -3,8 +3,8 @@ import './App.css';
 import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';
 
-import type { RootProps } from '../components';
 import { ReactUpload } from '../react-component';
+import type { RootProps } from '../types/Configuration.types';
 
 type AppProps = {
   mode?: 'light' | 'dark';
