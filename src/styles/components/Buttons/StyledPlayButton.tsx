@@ -4,11 +4,11 @@ import styled, { css } from 'styled-components';
 
 import type {
   ButtonProps,
+  CommonProps,
   StyledLineSvgProps
 } from '../../../types/Styles.types';
 import getColor from '../../../utils/themeHelpers';
 import NormalizedButton from './ButtonWrapper';
-import type { CommonProps } from './Common';
 import { sharedBehaviour } from './Common';
 
 function Play(props: CommonProps): ReactElement {

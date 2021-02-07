@@ -1,7 +1,3 @@
-export interface CommonProps {
-  onClick?: () => void;
-}
-
 export const hoverTransition = 'transition: all .1s ease';
 
 export const sharedBehaviour = (fill?: string): string => `

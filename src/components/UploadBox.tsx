@@ -9,18 +9,8 @@ import {
   StyledUploadBox,
   StyledUploadPercentageBox
 } from '../styles/components';
+import type { UploadBoxProps } from '../types/Configuration.types';
 
-export interface UploadBoxProps {
-  completed?: boolean;
-  disabled?: boolean;
-  fileName: string;
-  onPause?: () => void;
-  onStart?: () => void;
-  paused: boolean;
-  percentage: number;
-  strokeHeight?: number | string;
-  strokeWidth?: number;
-}
 const UploadBox = ({
   completed,
   disabled,

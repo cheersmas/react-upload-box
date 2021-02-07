@@ -8,3 +8,13 @@ export interface StyledLineSvgProps {
 export interface ButtonProps {
   disabled?: boolean;
 }
+
+export interface StyledUploadBoxProps {
+  completed?: boolean;
+  paused: boolean;
+  percentage: number;
+}
+
+export interface CommonProps {
+  onClick?: () => void;
+}

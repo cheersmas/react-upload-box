@@ -1,12 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import type { StyledUploadBoxProps } from '../../types/Styles.types';
 import getColor from '../../utils/themeHelpers';
-
-export interface StyledUploadBoxProps {
-  completed?: boolean;
-  paused: boolean;
-  percentage: number;
-}
 
 const StyledUploadPercentageBox = styled.div<StyledUploadBoxProps>`
   ${({ completed, paused, percentage, theme }) => css`

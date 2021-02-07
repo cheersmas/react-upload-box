@@ -1,4 +1,4 @@
-import { PauseButton, PlayButton, UploadButton } from './Buttons';
+import { PauseButton, PlayButton } from './Buttons';
 import StyledControllerWrapper from './StyledControllerWrapper';
 import StyledControls from './StyledControls';
 import StyledExpansionButtons from './StyledExpansionButtons';
