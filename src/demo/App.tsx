@@ -13,22 +13,18 @@ const App: FC = () => (
   <div className="outer-container">
     <section id="example-1" className="example-set-one">
       <Example1
-        fileName="readme.md"
         mode="light"
         seed={Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME}
       />
       <Example1
-        className="second"
-        fileName="github.sh"
         mode="dark"
+        className="second"
         seed={Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME}
       />
       <Example1
         className="third"
-        fileName="untitled.img"
-        strokeWidth={1}
-        seed={Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME}
         theme={customTheme}
+        seed={Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME}
       />
     </section>
   </div>

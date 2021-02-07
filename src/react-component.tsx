@@ -1,5 +1,5 @@
 import Component from './components';
-import type { ComponentTypes } from './types/Configuration.types';
+import type { ReactUploadProps } from './types/Configuration.types';
 
 export { Component as ReactUpload };
-export type ComponentConfiguration = ComponentTypes;
+export type ReactUploadTypes = ReactUploadProps;

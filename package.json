@@ -16,6 +16,7 @@
   "files": [
     "dist"
   ],
+  "repository": "https://github.com/cheersmas/react-upload-box.git",
   "author": "cheersmas",
   "license": "MIT",
   "scripts": {

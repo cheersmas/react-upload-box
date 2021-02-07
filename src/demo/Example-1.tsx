@@ -2,19 +2,18 @@ import './App.css';
 
 import type { FC } from 'react';
 import React, { useEffect, useState } from 'react';
+import type { DefaultTheme } from 'styled-components';
 
 import { ReactUpload } from '../react-component';
-import type { RootProps } from '../types/Configuration.types';
 
-type AppProps = {
-  mode?: 'light' | 'dark';
+interface AppProps {
   seed?: number;
-  fileName?: string;
   className?: string;
-  strokeWidth?: number;
-};
+  mode?: 'light' | 'dark';
+  theme?: DefaultTheme;
+}
 
-const App: FC<AppProps & RootProps> = ({ mode, theme, seed, ...rest }) => {
+const App: FC<AppProps> = ({ seed, ...rest }) => {
   const [counter, setCounter] = useState(0);
   const [pause, setPause] = useState(false);
   useEffect(() => {
@@ -32,8 +31,6 @@ const App: FC<AppProps & RootProps> = ({ mode, theme, seed, ...rest }) => {
   };
   return (
     <ReactUpload
-      mode={mode}
-      theme={theme}
       fileName="ubuntu-2020-1-2.dmg"
       percentage={counter}
       paused={pause}

@@ -11,7 +11,7 @@ export interface UploadBoxProps {
   strokeHeight?: number | string;
   strokeWidth?: number;
 }
-export interface RootProps {
+export interface ReactUploadProps extends UploadBoxProps {
   theme?: DefaultTheme;
   mode?: 'light' | 'dark';
 }
