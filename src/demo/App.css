@@ -26,39 +26,33 @@ code {
 .outer-container {
   align-items: center;
   display: flex;
-  height: 400px;
-  justify-content: center;
-  width: 100%;
-}
-
-.container {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
   height: 100vh;
+  justify-content: center;
   width: 100vw;
 }
 
-.container > div:nth-child(n) {
+.example-set-one {
   align-items: center;
+  background-color: rgba(223, 223, 223, 0.112);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px 0 #e3e1e1;
   display: flex;
-  height: 50%;
+  flex-direction: column;
   justify-content: center;
-  width: 50%;
+  padding: 32px;
+  width: 30%;
 }
 
-.container > div:nth-child(2) {
-  background: rgb(39, 108, 228);
+.example-set-one > *:not(:last-child) {
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
-.container > div:nth-child(3) {
-  background: rgb(228, 105, 39);
+.second {
+  border-radius: 0;
 }
 
-.container > div:nth-child(4) {
-  background: rgb(31, 28, 27);
-}
-
-.heading {
-  padding-bottom: 12px;
+.third {
+  border: 1px solid #636363;
+  border-radius: 4px;
 }

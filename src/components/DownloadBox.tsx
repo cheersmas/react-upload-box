@@ -30,9 +30,10 @@ const DownloadBox = ({
   percentage,
   paused,
   strokeHeight = '25%',
-  strokeWidth = 2
+  strokeWidth = 2,
+  ...rest
 }: DownloadBoxProps): JSX.Element => (
-  <StyledDownloadBox {...{ percentage }}>
+  <StyledDownloadBox {...{ percentage, completed, paused, ...rest }}>
     <StyledControls {...{ percentage }}>
       <div className="status">
         <div className="file-name">{fileName}</div>

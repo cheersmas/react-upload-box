@@ -1,41 +1,38 @@
 import './App.css';
 
 import type { FC } from 'react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-import { ReactDownload } from '../react-component';
+import Example1 from './Example-1';
+import { customTheme } from './themes/dark-theme';
 
-const App: FC = () => {
-  const [counter, setCounter] = useState(0);
-  const [pause, setPause] = useState(false);
-  useEffect(() => {
-    let timer;
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      if (counter < 100 && !pause) {
-        setCounter(counter + 1);
-      }
-    }, 100);
-    return () => clearTimeout(timer);
-  });
-  const playPauseDownload = () => {
-    setPause(!pause);
-  };
-  return (
-    <div className="outer-container">
-      <ReactDownload
+const MAX_TIME = 800;
+const MIN_TIME = 500;
+
+const App: FC = () => (
+  <div className="outer-container">
+    <section id="example-1" className="example-set-one">
+      <Example1
+        fileName="readme.md"
         mode="light"
-        fileName="something"
-        percentage={counter}
-        paused={pause}
-        disabled={counter === 100}
-        completed={counter === 100}
-        onPause={playPauseDownload}
-        onStart={playPauseDownload}
+        seed={Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME}
       />
-    </div>
-  );
-};
+      <Example1
+        className="second"
+        fileName="github.sh"
+        mode="dark"
+        seed={Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME}
+      />
+      <Example1
+        className="third"
+        fileName="untitled.img"
+        strokeWidth={1}
+        seed={Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME}
+        theme={customTheme}
+      />
+    </section>
+  </div>
+);
 
 export default App;
 //

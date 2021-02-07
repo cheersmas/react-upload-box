@@ -19,7 +19,10 @@ const StyledControls = styled.div`
 
       .file-name {
         color: ${theme.text.fileName};
-        width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
         ${hoverTransition};
 
         &:hover {
@@ -33,8 +36,7 @@ const StyledControls = styled.div`
         display: flex;
         font-size: 14px;
         justify-content: flex-end;
-        padding-right: 10%;
-        width: 100%;
+        padding-right: 1rem;
       }
     }
 

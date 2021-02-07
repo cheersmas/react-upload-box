@@ -7,10 +7,17 @@ import { darkTheme, lightTheme } from '../styles/themes';
 import type { DownloadBoxProps } from './DownloadBox';
 import DownloadBox from './DownloadBox';
 
-const Root: FC<
-  { theme?: DefaultTheme; mode?: 'light' | 'dark' } & DownloadBoxProps
-> = ({ mode = 'light', theme, ...rest }) => (
-  <ThemeProvider theme={theme || mode === 'light' ? lightTheme : darkTheme}>
+export interface RootProps {
+  theme?: DefaultTheme;
+  mode?: 'light' | 'dark';
+}
+
+const Root: FC<RootProps & DownloadBoxProps> = ({
+  mode = 'light',
+  theme,
+  ...rest
+}) => (
+  <ThemeProvider theme={theme || (mode === 'light' ? lightTheme : darkTheme)}>
     <DownloadBox {...rest} />
   </ThemeProvider>
 );
