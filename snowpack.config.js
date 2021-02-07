@@ -20,6 +20,6 @@ module.exports = {
   },
   buildOptions: {
     // update this configuration to wherever you wish to deploy your examples
-    // baseUrl: '/react-component'
+    baseUrl: '/react-upload-box'
   }
 };
