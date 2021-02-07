@@ -5,13 +5,14 @@ export interface CommonProps {
 export const hoverTransition = 'transition: all .1s ease';
 
 export const sharedBehaviour = (fill?: string): string => `
-  fill: ${fill};
   height: 16px;
+  width: 16px;
+  fill: ${fill};
+  opacity: 0.5;
   ${hoverTransition};
-
   &:hover {
     cursor: pointer;
-    fill: #eef4ed;
+    fill: ${fill};
     opacity: 1;
   }
 `;

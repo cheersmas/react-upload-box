@@ -24,9 +24,11 @@ const App: FC = () => {
   return (
     <div className="outer-container">
       <ReactDownload
+        mode="light"
         fileName="something"
         percentage={counter}
         paused={pause}
+        disabled={counter === 100}
         completed={counter === 100}
         onPause={playPauseDownload}
         onStart={playPauseDownload}
