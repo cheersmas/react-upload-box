@@ -1,10 +1,11 @@
 {
   "name": "react-upload-box",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A minimal react upload component with play/pause feature.",
-  "main": "dist/react-upload-component.js",
-  "module": "dist/react-upload-component.esm.js",
-  "umd": "dist/react-upload-component.umd.js",
+  "main": "dist/react-upload-box.js",
+  "module": "dist/react-upload-box.esm.js",
+  "umd": "dist/react-upload-box.umd.js",
+  "homepage": "https://cheersmas.github.io/react-upload-box/",
   "keywords": [
     "component",
     "download",

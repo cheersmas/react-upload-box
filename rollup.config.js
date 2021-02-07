@@ -16,7 +16,7 @@ const banner = `/*
 `;
 
 export default {
-  input: 'src/react-component.tsx', // update it to point to correct component definition
+  input: 'src/react-upload-box.tsx', // update it to point to correct component definition
   output: [
     {
       banner,
