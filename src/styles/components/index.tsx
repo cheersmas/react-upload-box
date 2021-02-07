@@ -1,25 +1,18 @@
-import React, { lazy } from 'react';
-import type { StyledProps } from 'styled-components';
-
 import {
   CancelButton,
   MoreButton,
   PauseButton,
   PlayButton,
   RestartButton,
-  StopButton,
-  UploadButton
+  StopButton
 } from './Buttons';
-import StyledLineSvg from './StyledLine';
+import StyledControllerWrapper from './StyledControllerWrapper';
+import StyledControls from './StyledControls';
+import StyledDownloadBox from './StyledDownloadBox';
+import StyledDownloadPercentageBox from './StyledDownloadPercentageBox';
+import StyledExpansionButtons from './StyledExpansionButtons';
+import StyledLine from './StyledLine';
 
-const StyledControllerWrapper = lazy(() => import('./StyledControllerWrapper'));
-const StyledControls = lazy(() => import('./StyledControls'));
-const StyledDownloadBox = lazy(() => import('./StyledDownloadBox'));
-const StyledDownloadPercentageBox = lazy(
-  () => import('./StyledDownloadPercentageBox')
-);
-const StyledLine = lazy(() => import('./StyledLine'));
-const StyledExpansionButtons = lazy(() => import('./StyledExpansionButtons'));
 export {
   CancelButton,
   MoreButton,
@@ -32,6 +25,5 @@ export {
   StyledDownloadBox,
   StyledDownloadPercentageBox,
   StyledExpansionButtons,
-  StyledLine,
-  StyledLineSvg
+  StyledLine
 };

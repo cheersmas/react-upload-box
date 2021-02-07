@@ -26,7 +26,9 @@ code {
 .outer-container {
   align-items: center;
   display: flex;
+  height: 400px;
   justify-content: center;
+  width: 100%;
 }
 
 .container {

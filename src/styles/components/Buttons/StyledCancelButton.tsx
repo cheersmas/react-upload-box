@@ -18,7 +18,7 @@ export default styled(Cancel)`
   height: 18px;
   ${sharedBehaviour};
 
-  &:hover {
+  &:focus {
     fill: #c64949;
   }
 `;

@@ -1,12 +1,10 @@
-import { lazy } from 'react';
-
-const CancelButton = lazy(() => import('./StyledCancelButton'));
-const MoreButton = lazy(() => import('./StyledMoreButton'));
-const PlayButton = lazy(() => import('./StyledPlayButton'));
-const PauseButton = lazy(() => import('./StyledPauseButton'));
-const RestartButton = lazy(() => import('./StyledCancelButton'));
-const UploadButton = lazy(() => import('./StyledUploadButton'));
-const StopButton = lazy(() => import('./StyledStopButton'));
+import CancelButton from './StyledCancelButton';
+import MoreButton from './StyledMoreButton';
+import PauseButton from './StyledPauseButton';
+import PlayButton from './StyledPlayButton';
+import RestartButton from './StyledRestartButton';
+import StopButton from './StyledStopButton';
+import UploadButton from './StyledUploadButton';
 
 export {
   CancelButton,

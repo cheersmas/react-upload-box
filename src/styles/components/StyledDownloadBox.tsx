@@ -9,6 +9,7 @@ const StyledDownloadBox = styled.div`
     overflow: hidden;
     padding: 24px;
     position: relative;
+    width: 100%;
   `}
 `;
 

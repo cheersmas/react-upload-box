@@ -1,8 +1,9 @@
+import type { ReactElement } from 'react';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
 export interface StyledLineSvgProps {
-  paused: boolean;
+  paused?: boolean;
 }
 
 const StyledLineSvg = styled.svg<StyledLineSvgProps>`
@@ -17,7 +18,7 @@ const StyledLineSvg = styled.svg<StyledLineSvgProps>`
   `};
 `;
 
-const Line = ({ paused }: StyledLineSvgProps) => (
+const Line = ({ paused }: StyledLineSvgProps): ReactElement => (
   <StyledLineSvg
     viewBox="0 0 600 12"
     preserveAspectRatio="none"
@@ -28,7 +29,7 @@ const Line = ({ paused }: StyledLineSvgProps) => (
       vectorEffect="non-scaling-stroke"
       className="line-path"
       d="M0,1 L200,1 C300,1 300,12 400,12 L600,12"
-      strokeWidth={8}
+      strokeWidth={3}
       fill="none"
     />
   </StyledLineSvg>
