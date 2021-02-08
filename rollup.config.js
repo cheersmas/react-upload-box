@@ -51,6 +51,13 @@ export default {
       extensions: ['tsx', 'ts'],
       babelHelpers: 'runtime',
       plugins: [
+        [
+          'babel-plugin-styled-components',
+          {
+            minify: true,
+            pure: true
+          }
+        ],
         '@babel/plugin-transform-runtime',
         '@babel/plugin-proposal-optional-chaining'
       ]
@@ -68,5 +75,5 @@ export default {
       }
     })
   ],
-  external: ['react', 'react-dom', '@babel/runtime']
+  external: ['react', 'react-dom', 'styled-components', '@babel/runtime']
 };
