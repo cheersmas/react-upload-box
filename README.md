@@ -139,6 +139,21 @@ lightTheme: DefaultTheme = {
 
 > To create one's own `theme` copy paste these values and change them accordingly. All keys must be present otherwise the `properties` are set to `none`;
 
+## Mentions and References
+
+Icons
+
+- [Play](https://www.flaticon.com/authors/pixel-perfect)
+- [Pause](https://icon54.com)
+
+Code and configuration mentions
+
+- [Codepen - Aaron Iker](https://codepen.io/aaroniker/pen/QXxexJ?editors=1010)
+
+- [Dribbble - Jakub Antalik](https://dribbble.com/shots/6052541-Upload-window-interactions)
+
+- [React Chrono](https://github.com/prabhuignoto/react-chrono)
+
 ## Meta
 
 Distributed under the MIT license. See `LICENSE` for more information.
