@@ -33,14 +33,14 @@
 
 ```javascript
 
-  import React, { useState } from 'react';
+  import React, { useState } from 'react'
   import { ReactUpload } from 'react-upload-box'
   function App() {
-    const [percentage, setPercentage] = useState(0);
-    const [pause, setPause] = useState(false);
+    const [percentage, setPercentage] = useState(0)
+    const [pause, setPause] = useState(false)
     const uploadFile = async () => {
       ...
-      setPercentage(newPercentage);
+      setPercentage(newPercentage)
     }
     const handlePause = async () => {
       ...
@@ -64,9 +64,9 @@
           onStart={handleStart}
         />
       </div>
-    );
+    )
   }
-  export default App;
+  export default App
 
 ```
 
