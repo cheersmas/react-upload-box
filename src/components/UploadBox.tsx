@@ -23,7 +23,13 @@ const UploadBox = ({
   strokeWidth = 2,
   ...rest
 }: UploadBoxProps): JSX.Element => (
-  <StyledUploadBox {...{ percentage, completed, paused, ...rest }}>
+  <StyledUploadBox
+    role="progressbar"
+    aria-valuemin={0}
+    aria-valuemax={100}
+    aria-valuenow={percentage}
+    {...{ percentage, completed, paused, ...rest }}
+  >
     <StyledControls {...{ percentage }}>
       <div className="status">
         <div className="file-name">{fileName}</div>
@@ -33,7 +39,11 @@ const UploadBox = ({
       </div>
       <div className="controls">
         {paused || completed ? (
-          <PlayButton onClick={onStart} {...{ completed, paused, disabled }} />
+          <PlayButton
+            onClick={onStart}
+            aria-disabled={disabled}
+            {...{ completed, paused, disabled }}
+          />
         ) : (
           <PauseButton onClick={onPause} {...{ completed, paused }} />
         )}
