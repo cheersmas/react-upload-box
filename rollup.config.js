@@ -41,7 +41,8 @@ export default {
       name: 'ReactComponent',
       globals: {
         react: 'React',
-        'react-dom': 'ReactDOM'
+        'react-dom': 'ReactDOM',
+        'styled-components': 'styled'
       }
     }
   ],
