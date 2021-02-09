@@ -23,7 +23,8 @@
     "src/hooks",
     "src/utils",
     "src/types",
-    "src/styles"
+    "src/styles",
+    "src/custom.d.ts"
   ],
   "exclude": [
     "__tests__/**/*.test.tsx",
