@@ -13,7 +13,7 @@ import { sharedBehaviour } from './Common';
 
 function Play(props: CommonProps): ReactElement {
   return (
-    <NormalizedButton type="button" {...props}>
+    <NormalizedButton type="button" aria-label="Play button" {...props}>
       <svg version="1.1" x="0px" y="0px" viewBox="0 0 320.001 320.001">
         <path
           d="M295.84,146.049l-256-144c-4.96-2.784-11.008-2.72-15.904,0.128C19.008,5.057,16,10.305,16,16.001v288
