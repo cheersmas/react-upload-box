@@ -41,8 +41,8 @@ const UploadBox = ({
         {paused || completed ? (
           <PlayButton
             onClick={onStart}
-            {...{ completed, paused, disabled }}
             aria-disabled={disabled}
+            {...{ completed, paused, disabled }}
           />
         ) : (
           <PauseButton onClick={onPause} {...{ completed, paused }} />

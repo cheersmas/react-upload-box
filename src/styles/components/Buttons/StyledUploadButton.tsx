@@ -13,7 +13,14 @@ import { sharedBehaviour } from './Common';
 function Upload(props: CommonProps): ReactElement {
   return (
     <NormalizedButton {...props}>
-      <svg version="1.1" x="0px" y="0px" viewBox="0 0 29.977 29.977" {...props}>
+      <svg
+        version="1.1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 29.977 29.977"
+        aria-label="Upload button"
+        {...props}
+      >
         <g>
           <path
             d="M25.462,19.104v6.848H4.512v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.012,2.012h24.971
